@@ -1,5 +1,51 @@
-# BookAPI
-Full Stack Development with Angular and Spring MVC. Which perform CRUD operation like CREATE, READ, UPDATE, DELETE using REST API by making use of Hibernate as an ORM
+# BOOK API - Spring MVC, MySQL, Hibernate Rest API Tutorial
 
-The Application we are going to build an End-to-End Database Application, we are going to perform all the CRUD operations, like CREATE, READ, UPDATE, DELETE. Using technology like Angular and Spring MVC.
-We are going build and REST API which is a BOOK API using Spring MVC and we will make use of Hibernate as our ORM. The BOOK API provide a bunch of service end points which we are going to make HTTP calls on those service end points using Angular
+Build Restful CRUD API for a simple Book-Manage application using Spring MVC, Mysql and Hibernate.
+
+## Requirements
+
+    Java - 1.8.x
+
+    Maven - 3.3.9
+
+    MySQL - 5.7.12
+
+## Steps to Setup
+
+### 1. Clone the application
+
+git clone https://github.com/scbushan05/book-api.git
+
+### 2. Create Mysql database
+
+create database bookdb
+
+### 3. Change mysql username and password as per your installation
+
+    open src/main/resources/db.properties
+
+    change mysql.user and mysql.password as per your mysql installation
+
+### 4. Build and run the app using maven
+
+mvn package
+
+A new WAR file will be generated at project/target/bookapi-0.0.1-SNAPSHOT.war, just copy and deploy to your Tomcat.
+
+The app will start running at http://localhost:8080/bookapi/.
+
+## Explore Rest APIs
+
+The app defines following CRUD APIs.
+
+GET /api/book
+
+POST /api/book
+
+GET /api/book/{bookId}
+
+PUT /api/book/{bookId}
+
+DELETE /api/book/{bookId}
+
+You can test them using postman or any other rest client.
