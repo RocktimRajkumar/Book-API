@@ -18,7 +18,7 @@ git clone https://github.com/scbushan05/book-api.git
 
 ### 2. Create Mysql database
 
-create database bookdb
+create database bookapi
 
 ### 3. Change mysql username and password as per your installation
 
