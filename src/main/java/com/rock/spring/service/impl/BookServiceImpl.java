@@ -1,20 +1,12 @@
-package com.rock.spring.dao.impl;
+package com.rock.spring.service.impl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-
-import com.rock.spring.dao.BookDAO;
 import com.rock.spring.model.Book;
+import com.rock.spring.service.BookService;
 
-@Repository
-public class BookDAOImpl implements BookDAO{
+public class BookServiceImpl implements BookService {
 
-	@Autowired
-	private SessionFactory sessionFactory;
-	
 	@Override
 	public long saveBook(Book book) {
 		// TODO Auto-generated method stub
@@ -29,8 +21,8 @@ public class BookDAOImpl implements BookDAO{
 
 	@Override
 	public List<Book> getAll() {
-		List<Book> list = sessionFactory.getCurrentSession().createQuery("from Book").list();
-		return list;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
