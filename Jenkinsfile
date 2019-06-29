@@ -23,6 +23,10 @@ pipeline{
 			
 			}
 			
+			stage('Artifact'){
+				archive 'target/*.war'
+			}
+			
 			stage('Deployment Stage'){
 				steps{
 					withMaven(maven : 'maven_3.6.0'){
