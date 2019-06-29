@@ -25,7 +25,7 @@ pipeline{
 			
 			stage('Artifact'){
 				steps{
-					archive 'target/*.war'
+					archiveArtifacts artifacts: 'target/*.war'
 				}
 			}
 			
