@@ -26,7 +26,7 @@ pipeline{
 			stage('Deployment Stage'){
 				steps{
 					withMaven(maven : 'maven_3.6.0'){
-						bat 'echo %cd%'
+						bat 'copy %cd%\target\target\*.war  C:\app\apache-tomcat-8.0.53-windows-x64\apache-tomcat-8.0.53\webapps\'
 						echo "Successfully Deploy"
 					}
 				}
