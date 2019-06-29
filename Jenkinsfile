@@ -26,6 +26,7 @@ pipeline{
 			stage('Deployment Stage'){
 				steps{
 					withMaven(maven : 'maven_3.6.0'){
+						bat 'echo %cd%'
 						echo "Successfully Deploy"
 					}
 				}
