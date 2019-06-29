@@ -13,7 +13,7 @@ import com.rock.spring.service.BookService;
 
 @Service
 public class BookServiceImpl implements BookService {
-	
+
 	@Autowired
 	private BookDAO bookDAO;
 
@@ -32,20 +32,19 @@ public class BookServiceImpl implements BookService {
 	@Override
 	@Transactional
 	public List<Book> getAll() {
-		
 		return bookDAO.getAll();
 	}
 
 	@Override
+	@Transactional
 	public void update(long id, Book book) {
-		// TODO Auto-generated method stub
-		
+		bookDAO.update(id, book);
 	}
 
 	@Override
 	public void delete(long id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
