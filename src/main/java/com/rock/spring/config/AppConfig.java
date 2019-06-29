@@ -53,6 +53,7 @@ public class AppConfig {
 
 	}
 	
+	@Bean
 	public HibernateTransactionManager getTransactionManager() {
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
 		transactionManager.setSessionFactory(getSessionFactory().getObject());

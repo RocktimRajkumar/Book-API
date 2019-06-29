@@ -2,15 +2,25 @@ package com.rock.spring.service.impl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.rock.spring.dao.BookDAO;
 import com.rock.spring.model.Book;
 import com.rock.spring.service.BookService;
 
+@Service
 public class BookServiceImpl implements BookService {
+	
+	@Autowired
+	private BookDAO bookDAO;
 
 	@Override
+	@Transactional
 	public long saveBook(Book book) {
-		// TODO Auto-generated method stub
-		return 0;
+		return bookDAO.saveBook(book);
 	}
 
 	@Override
@@ -20,9 +30,10 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
+	@Transactional
 	public List<Book> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return bookDAO.getAll();
 	}
 
 	@Override
