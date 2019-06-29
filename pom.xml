@@ -5,7 +5,7 @@
 	<groupId>com.rock</groupId>
 	<artifactId>bookapi</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
@@ -82,6 +82,15 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<warName>BookAPI</warName>
 				</configuration>
 			</plugin>
 
