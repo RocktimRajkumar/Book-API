@@ -8,7 +8,7 @@ pipeline{
 			
 				steps{
 					withMaven(maven : 'maven_3.6.0'){
-						bat 'mvn clean compile'
+						bat 'mvn clean compile package'
 					}
 				}
 			
@@ -22,13 +22,7 @@ pipeline{
 				}
 			
 			}
-			
-			stage('Artifact'){
-				steps{
-					archiveArtifacts artifacts: 'target/*.war'
-				}
-			}
-			
+
 			stage('Deployment Stage'){
 				steps{
 					withMaven(maven : 'maven_3.6.0'){
