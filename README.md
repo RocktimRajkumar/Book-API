@@ -6,9 +6,9 @@ Build Restful CRUD API for a simple Book-Manage application using Spring MVC, My
 
     Java - 1.8.x
 
-    Maven - 3.3.9
+    Maven - 3.6.0
 
-    MySQL - 5.7.12
+    MySQL - 8.0.2
 
 ## Steps to Setup
 
@@ -30,7 +30,7 @@ create database bookapi
 
 mvn package
 
-A new WAR file will be generated at project/target/bookapi-0.0.1-SNAPSHOT.war, just copy and deploy to your Tomcat.
+A new WAR file will be generated at project/target/BookAPI.war, just copy and deploy to your Tomcat.
 
 The app will start running at http://localhost:8080/bookapi/.
 
