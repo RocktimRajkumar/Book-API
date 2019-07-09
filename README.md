@@ -1,4 +1,4 @@
-# BOOK API - Spring MVC, MySQL, Hibernate Rest API Tutorial
+# &#x1F4D7; BOOK API - Spring MVC, MySQL, Hibernate Rest API Tutorial
 
 Build Restful CRUD API for a simple Book-Manage application using Spring MVC, Mysql and Hibernate.
 
