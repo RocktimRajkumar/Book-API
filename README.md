@@ -32,20 +32,17 @@ mvn package
 
 A new WAR file will be generated at project/target/BookAPI.war, just copy and deploy to your Tomcat.
 
-The app will start running at http://localhost:8080/bookapi/.
+The app will start running at http://localhost:8080/BookAPI/api/book/.
 
 ## Explore Rest APIs
 
 The app defines following CRUD APIs.
 
-GET /api/book
-
-POST /api/book
-
-GET /api/book/{bookId}
-
-PUT /api/book/{bookId}
-
-DELETE /api/book/{bookId}
+|HTTP Method  | CRUD Operation  | Description |
+|--|--|--|
+| POST | Create  | Create a new Book <br> https://localhost:8080/BookAPI/api/book|
+| GET  | Read 	 |Retrieve a Single Book/All Books <br> https://localhost:8080/BookAPI/api/book <br> https://localhost:8080/BookAPI/api/book/{id}|
+| PUT  | Update  |Update or modify a Book <br> https://localhost:8080/BookAPI/api/book/{id}|
+| DELETE| Delete |Delete a Book :- https://localhost:8080/BookAPI/api/book/{id}|
 
 You can test them using postman or any other rest client.
